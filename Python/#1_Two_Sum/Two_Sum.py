@@ -23,7 +23,7 @@
 
 
 # Time complexity : O(N * N-1) = O(N^2)
-def twoSum(nums=[0], target=0):
+def twoSum(nums: list[int], target: int) -> list[int]:
     for num in nums:
         for i in range(nums.index(num) + 1, len(nums)):
             if num + nums[i] == target:
@@ -32,7 +32,7 @@ def twoSum(nums=[0], target=0):
 
 
 # Time complexity: O(N)
-def twoSum_followUp(nums=[0], target=0):
+def twoSum_followUp(nums: list[int], target: int) -> list[int]:
     Map = {}
     for i in range(len(nums)):
         Map[nums[i]] = i
