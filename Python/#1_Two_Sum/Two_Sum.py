@@ -28,7 +28,7 @@ def twoSum(nums=[0], target=0):
         for i in range(nums.index(num) + 1, len(nums)):
             if num + nums[i] == target:
                 return [nums.index(num), i]
-    return None
+    return []
 
 
 # Time complexity: O(N + N) = O(2N) = O(N)
@@ -41,7 +41,7 @@ def twoSum_followUp(nums=[0], target=0):
     for num in nums:
         if num + nums[nums.index(num) - 2] == target:
             return [nums.index(num), nums.index(num) - 2]
-    return None
+    return []
 
 
 if __name__ == '__main__':
