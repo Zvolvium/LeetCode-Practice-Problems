@@ -32,7 +32,7 @@ def twoSum(nums=[0], target=0):
 
 
 # Time complexity: O(N + N) = O(2N) = O(N)
-# TODO: Come back to after rest...
+# TODO: Come back to after rest - Time of writing - 23:33
 def twoSum_followUp(nums=[0], target=0):
     for i in range(len(nums) - 1):
         if nums[i] + nums[i + 1] == target:
