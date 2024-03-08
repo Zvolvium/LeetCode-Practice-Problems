@@ -31,16 +31,15 @@ def twoSum(nums=[0], target=0):
     return []
 
 
-# Time complexity: O(N + N) = O(2N) = O(N)
-# TODO: Come back to after rest - Time of writing - 23:33
+# Time complexity: O(N)
 def twoSum_followUp(nums=[0], target=0):
-    for i in range(len(nums) - 1):
-        if nums[i] + nums[i + 1] == target:
-            return [i, i + 1]
+    Map = {}
+    for i in range(len(nums)):
+        Map[nums[i]] = i
 
-    for num in nums:
-        if num + nums[nums.index(num) - 2] == target:
-            return [nums.index(num), nums.index(num) - 2]
+    for i in range(len(nums)):
+        if target - nums[i] in Map.keys() and i != Map[target - nums[i]]:
+            return [i, Map[target - nums[i]]]
     return []
 
 
